@@ -7,7 +7,7 @@ repository = "https://github.com/ANSSI-FR/mdbook-checklist"
 description = "An mdBook preprocessor for generating checklists and indexes."
 keywords = ["mdbook", "markdown", "preprocessor"]
 readme = "README.md"
-license = "Open License 2.0"
+license-file = "LICENCE.md"
 
 [dependencies]
 clap = "2.32"
