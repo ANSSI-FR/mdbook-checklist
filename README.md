@@ -7,7 +7,7 @@ A preprocessor for gathering checks in an mdBook and generating an index.
 First, you need to install the preprocessor:
 
 ```
-cargo install mdbook-checklist-preprocessor
+cargo install mdbook-checklist
 ```
 
 Next, you need to add the preprocessor to your `book.toml`:
