@@ -1,5 +1,8 @@
 # mdBook checklist preprocessor
 
+[![Crates.io](https://img.shields.io/crates/v/mdbook-checklist.svg)](https://crates.io/crates/mdbook-checklist)
+[![Build Status](https://travis-ci.org/ANSSI-FR/mdbook-checklist.svg?branch=master)](https://https://travis-ci.org/ANSSI-FR/mdbook-checklist)
+
 A preprocessor for gathering checks in an mdBook and generating an index.
 
 ## Usage
