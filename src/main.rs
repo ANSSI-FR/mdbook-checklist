@@ -8,25 +8,25 @@ mod checklist_pre;
 
 use checklist_pre::ChecklistPre;
 
-use clap::{App, Arg, ArgMatches, SubCommand};
+use clap::{Arg, ArgMatches, Command};
 use mdbook::errors::Error;
 use mdbook::preprocess::{CmdPreprocessor, Preprocessor};
 
 use std::io;
 use std::process;
 
-fn make_app() -> App<'static, 'static> {
-    App::new("checklist-preprocessor")
+fn make_command() -> Command<'static> {
+    Command::new("checklist-preprocessor")
         .about("A mdbook preprocessor to generate checklists")
         .subcommand(
-            SubCommand::with_name("supports")
-                .arg(Arg::with_name("renderer").required(true))
+            Command::new("supports")
+                .arg(Arg::new("renderer").required(true))
                 .about("Check whether a renderer is supported by this preprocessor"),
         )
 }
 
 fn main() -> Result<(), Error> {
-    let matches = make_app().get_matches();
+    let matches = make_command().get_matches();
     let preprocessor = ChecklistPre;
 
     if let Some(sub_args) = matches.subcommand_matches("supports") {

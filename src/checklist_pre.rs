@@ -65,7 +65,7 @@ fn collect_and_replace(chapter: &Chapter, checklist: &mut Checklist) -> String {
         replaced.push_str(&name);
         previous_end_index = end_index;
 
-        checklist.insert(&chapter.name, &chapter.path, name, desc);
+        checklist.insert(&chapter.name, &chapter.path.as_ref().unwrap(), name, desc);
     }
 
     replaced.push_str(&s[previous_end_index..]);

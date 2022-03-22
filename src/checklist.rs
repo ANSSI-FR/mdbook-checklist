@@ -1,7 +1,6 @@
 use mdbook::book::Chapter;
-use std::collections::BTreeMap;
 use std::path::PathBuf;
-use toml::Value;
+use toml::{Value, value::Table};
 
 pub struct Checklist {
     title: String,
@@ -16,7 +15,7 @@ impl Checklist {
         }
     }
 
-    pub fn update_config(&mut self, config: &BTreeMap<String, Value>) {
+    pub fn update_config(&mut self, config: &Table) {
         if let Some(Value::String(title)) = config.get("title") {
             self.title = title.clone();
         }
@@ -59,14 +58,12 @@ impl Checklist {
             }
         }
 
-        Chapter {
-            name: self.title,
+        Chapter::new(
+            &self.title,
             content,
-            number: None,
-            sub_items: vec![],
-            path: ["checklist.md"].iter().collect(),
-            parent_names: vec![],
-        }
+            "checklist.md",
+            vec![],
+        )
     }
 }
 
