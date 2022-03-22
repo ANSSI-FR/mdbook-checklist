@@ -2,7 +2,7 @@
 name = "mdbook-checklist"
 version = "0.1.0"
 authors = ["Aurélien Deharbe <aurelien.deharbe@ssi.gouv.fr>"]
-edition = "2018"
+edition = "2021"
 repository = "https://github.com/ANSSI-FR/mdbook-checklist"
 description = "An mdBook preprocessor for generating checklists and indexes."
 keywords = ["mdbook", "markdown", "preprocessor"]
