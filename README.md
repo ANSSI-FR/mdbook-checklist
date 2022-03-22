@@ -2,6 +2,7 @@
 
 [![Crates.io](https://img.shields.io/crates/v/mdbook-checklist.svg)](https://crates.io/crates/mdbook-checklist)
 [![Github CI](https://github.com/ANSSI-FR/mdbook-checklist/workflows/Rust/badge.svg)](https://github.com/ANSSI-FR/mdbook-checklist/actions)
+[![Github CI](https://github.com/ANSSI-FR/mdbook-checklist/workflows/Clippy/badge.svg)](https://github.com/ANSSI-FR/mdbook-checklist/actions)
 
 A preprocessor for gathering checks in an mdBook and generating an index.
 
