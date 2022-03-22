@@ -23,7 +23,7 @@ impl Preprocessor for ChecklistPre {
 
         book.for_each_mut(|section: &mut BookItem| {
             if let BookItem::Chapter(ref mut chapter) = *section {
-                let content = collect_and_replace(&chapter, &mut checklist);
+                let content = collect_and_replace(chapter, &mut checklist);
                 chapter.content = content;
             }
         });
@@ -65,7 +65,7 @@ fn collect_and_replace(chapter: &Chapter, checklist: &mut Checklist) -> String {
         replaced.push_str(&name);
         previous_end_index = end_index;
 
-        checklist.insert(&chapter.name, &chapter.path.as_ref().unwrap(), name, desc);
+        checklist.insert(&chapter.name, chapter.path.as_ref().unwrap(), name, desc);
     }
 
     replaced.push_str(&s[previous_end_index..]);

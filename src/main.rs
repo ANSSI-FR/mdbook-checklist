@@ -38,7 +38,7 @@ fn main() -> Result<(), Error> {
 
 fn handle_supports(pre: &dyn Preprocessor, sub_args: &ArgMatches) -> Result<(), Error> {
     let renderer = sub_args.value_of("renderer").expect("Required argument");
-    let supported = pre.supports_renderer(&renderer);
+    let supported = pre.supports_renderer(renderer);
 
     process::exit(if supported { 0 } else { 1 });
 }

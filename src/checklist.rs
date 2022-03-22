@@ -1,6 +1,6 @@
 use mdbook::book::Chapter;
 use std::path::PathBuf;
-use toml::{Value, value::Table};
+use toml::{value::Table, Value};
 
 pub struct Checklist {
     title: String,
@@ -58,12 +58,7 @@ impl Checklist {
             }
         }
 
-        Chapter::new(
-            &self.title,
-            content,
-            "checklist.md",
-            vec![],
-        )
+        Chapter::new(&self.title, content, "checklist.md", vec![])
     }
 }
 
