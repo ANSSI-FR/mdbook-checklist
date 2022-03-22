@@ -1,6 +1,6 @@
 [package]
 name = "mdbook-checklist"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Aurélien Deharbe <aurelien.deharbe@ssi.gouv.fr>"]
 edition = "2021"
 repository = "https://github.com/ANSSI-FR/mdbook-checklist"
