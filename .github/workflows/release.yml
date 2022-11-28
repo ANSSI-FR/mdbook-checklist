@@ -20,7 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: taiki-e/upload-rust-binary-action@v1
-      - name: Build
         with:
           bin: mdbook-checklist
           token: ${{ secrets.GITHUB_TOKEN }}
