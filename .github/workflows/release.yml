@@ -16,10 +16,18 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
   upload:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
           bin: mdbook-checklist
+          tar: unix
+          zip: windows
           token: ${{ secrets.GITHUB_TOKEN }}
